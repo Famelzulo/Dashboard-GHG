@@ -1,45 +1,44 @@
 import React from 'react';
 import EmissionsBySourceChart from './components/EmissionsBySourceChart';
 import GHGEmissionsByScopeChart from './components/GHGEmissionsByScopeChart';
-import ReductionsChart from './components/ReductionsChart';
 import TrendChart from './components/TrendChart';
 import KPIMetrics from './components/KPIMetrics';
+import TotalEmissionsChart from './components/TotalEmissionsChart';
+import ReductionsMetrics from './components/ReductionsMetrics';
+import IndicatorsTo2030Chart from './components/IndicatorsTo2030Chart';
 
 const Dashboard = () => {
   return (
-    <div className="min-h-screen bg-teal-300 p-4">
-      <div className="h-full flex flex-col">
-        <h1
-          className="text-lg font-bold text-center text-green-800 mb-3"
-          style={{
-            fontSize: '45px',
-            color: '#7ef26d',
-            fontFamily: 'Arial, sans-serif',
-            marginTop: '20px',
-          }}
-        >
+    <div className="h-screen w-screen bg-gray-500 p-2 overflow-hidden">
+      <div className="bg-white rounded-lg p-3 shadow-lg h-full flex flex-col overflow-hidden">
+        {/* Header */}
+        <h1 className="text-center font-bold mb-2 text-xl text-green-400">
           Dashboard GHG Emissions
         </h1>
 
-        {/* GRÁFICOS: Responsive con Flexbox */}
-        <div className="flex flex-wrap justify-center gap-4 mt-4">
-          <div className="w-full md:w-1/2">
+        {/* Grid compacto sin scroll */}
+        <div className="grid grid-cols-3 grid-rows-3 gap-2 flex-grow overflow-hidden">
+          <div className="h-[150px] overflow-hidden">
             <EmissionsBySourceChart />
           </div>
-          <div className="w-full md:w-1/2">
+          <div className="h-[150px] overflow-hidden">
             <GHGEmissionsByScopeChart />
           </div>
-          <div className="w-full md:w-1/2">
-            <ReductionsChart />
-          </div>
-          <div className="w-full md:w-1/2">
+          <div className="h-[150px] overflow-hidden">
             <TrendChart />
           </div>
-        </div>
-
-        {/* KPIs debajo */}
-        <div className="mt-6">
-          <KPIMetrics />
+          <div className="h-[150px] overflow-hidden">
+            <TotalEmissionsChart />
+          </div>
+          <div className="h-[150px] overflow-hidden">
+            <KPIMetrics />
+          </div>
+          <div className="h-[150px] overflow-hidden">
+            <ReductionsMetrics />
+          </div>
+          <div className="h-[150px] overflow-hidden max-w-[300px] mx-auto">
+            <IndicatorsTo2030Chart />
+          </div>
         </div>
       </div>
     </div>

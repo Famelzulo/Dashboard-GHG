@@ -8,11 +8,12 @@ const KPIComponent = ({ label, value, unit }) => {
         width: 250,
         height: 100,
         border: '5px solid #7ef26d',
-        marginTop: '-275px',
-        marginLeft: '990px',
+        marginTop: '-875px',
+        marginLeft: '10px',
         borderRadius: '8px',
         display: 'flex',
         backgroundColor: '#f9fafb',
+        marginBottom: '520px',
       }}
     >
       <h6
@@ -21,7 +22,7 @@ const KPIComponent = ({ label, value, unit }) => {
           fontSize: '20px',
           color: '#4b5563', 
           marginLeft: '50px',
-          marginTop: '40px',
+          marginTop: '240px',
         }}
       >
         {label}
@@ -33,7 +34,7 @@ const KPIComponent = ({ label, value, unit }) => {
           style={{ color: '#1f2937',
             fontSize: '20px', 
             marginLeft: '10px',
-            marginTop: '-20px',
+            marginTop: '420px',
             fontWeight: 'bold',
            }} 
         >

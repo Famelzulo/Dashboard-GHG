@@ -1,7 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- body{
-    background-color: #f1f1f1;
-    font-family: 'Arial, sans-serif';
- }
+ 
+ body {
+  background: url('/images/leaf-pattern.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+}

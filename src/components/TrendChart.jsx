@@ -33,7 +33,7 @@ const TrendChart = () => {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: { labels: { font: { size: 8 } } },
           tooltip: { mode: 'index', intersect: false },
@@ -66,8 +66,8 @@ const TrendChart = () => {
         height: '280px',
         border: '5px solid #7ef26d',
         fontSize: '20px',
-        marginLeft: '304px',
-        marginTop: '-300px',
+        marginLeft: '404px',
+        marginTop: '-30px',
         borderRadius: '8px',
         backgroundColor: '#f9fafb',
       }}
