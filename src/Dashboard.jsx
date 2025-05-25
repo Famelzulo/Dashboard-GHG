@@ -12,7 +12,24 @@ const Dashboard = () => {
     <div className="h-screen w-screen bg-gray-500 p-2 overflow-hidden">
       <div className="bg-white rounded-lg p-3 shadow-lg h-full flex flex-col overflow-hidden">
         {/* Header */}
-        <h1 className="text-center font-bold mb-2 text-xl text-green-400">
+        <h1 className="text-center font-bold mb-2 text-xl text-green-400"
+          style={{
+            color: '#33662b',
+            fontSize: '22px',
+            fontWeight: 'bold',
+            marginLeft: '40px',
+            marginTop: '60px',
+            width: '100%',
+            maxWidth: '600px',
+            padding: '10px',
+          }}>
+
+             <img
+    src="https://images.icon-icons.com/1863/PNG/96/dashboard_119241.png"
+    alt="GHG Icon"
+    style={{ width: '20px', height: '20px', objectFit: 'contain',  }}
+  />
+
           Dashboard GHG Emissions
         </h1>
 

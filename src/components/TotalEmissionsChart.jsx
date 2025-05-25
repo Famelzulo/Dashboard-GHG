@@ -71,35 +71,47 @@ export default function TotalEmissionsChart() {
   return (
     <div
       style={{
-        maxWidth: '600px',    // ancho máximo limitado
-        width: '90%',         // ocupa el 90% del ancho del contenedor padre
-        height: '300px',      // altura fija para mantener proporción
+        position: 'absolute', // lo hace independiente del flujo
+        maxWidth: '360px',
+        maxHeight: '290px',    // ancho máximo limitado
+        width: '100%',         // ocupa el 90% del ancho del contenedor padre
+        height: '100%',      // altura fija para mantener proporción
         margin: '20px auto',  // centrado horizontal automático
         backgroundColor: 'white',
         borderRadius: '8px',
-        padding: '16px',
-        boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
+        padding: '10px',
+        boxShadow: '10px 8px 10px rgba(0,0,0,0.1)',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
         alignItems: 'center',
+        marginTop: '370px',
+        marginLeft: '780px',
       }}
     >
-      <h5
-        style={{
-          fontSize: '20px',
-          color: '#7ef26d',
-          fontFamily: 'Arial, sans-serif',
-          marginBottom: '16px',
-          textAlign: 'center',
-          marginTop: '0',
-          marginLeft: '0',
-        }}
-      >
-        Emisiones Totales
-      </h5>
+      <h4
+  style={{
+    position: 'absolute', // lo hace independiente del flujo
+    bottom: '240px',          // posición vertical desde el borde superior
+    left: '0px',         // posición horizontal desde el borde izquierdo
+    fontSize: '50px',
+    color: 'green',
+    fontFamily: 'Arial, sans-serif',
+    fontSize: '20px',
+        boxShadow: '10 2px 6px rgba(0,0,0,0.1)',
+        padding: '14px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        width: '100%',
+        height: '100%',
+        maxHeight: '30px', // altura máxima
+        maxWidth: '352px',  // ancho máximo
 
-      <div style={{ width: '100%', height: 'calc(100% - 40px)' }}>
+    
+  }}
+>
+  Emisiones Totales
+</h4>
+
+      <div style={{ width: '300px', height: '300px' }}>
         <Line data={data} options={options} />
       </div>
     </div>

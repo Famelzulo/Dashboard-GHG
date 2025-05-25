@@ -89,15 +89,15 @@ export default function EmissionsBySourceChart() {
   return (
     <div
       style={{
-        width: '320px',      // ancho fijo o responsive que quieras
-        height: '280px',     // alto fijo para que no crezca demasiado
-        margin: 'auto',     // centrado horizontal
-        padding: '10px',    // espacio interior opcional
-        border: '2px solid #7ef26d',
+        position: 'absolute',
+        width: '100%',
+        maxWidth: '380px',
+        height: '312px',           // ✅ altura fija
         borderRadius: '8px',
         backgroundColor: '#fff',
-        marginLeft: '404px',
-        marginTop: '130px',
+        left: '790px',
+        top: '120px',
+        boxShadow: '10px 10px 6px rgba(0,0,0,0.1)',
       }}
     >
       <Bar data={data} options={options} />

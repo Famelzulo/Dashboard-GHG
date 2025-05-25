@@ -62,14 +62,16 @@ const TrendChart = () => {
     <div
       className="bg-white p-2 rounded-md shadow-sm flex flex-col items-center justify-center"
       style={{
-        width: '250px',
-        height: '280px',
-        border: '5px solid #7ef26d',
+        position: 'absolute',
+        width: '280px',
+        height: '265px',
+        boxShadow: '10px 8px 6px rgba(0,0,0,0.1)',
         fontSize: '20px',
-        marginLeft: '404px',
-        marginTop: '-30px',
+        marginLeft: '3rem',
+        top: '120px',
         borderRadius: '8px',
-        backgroundColor: '#f9fafb',
+        backgroundColor: 'white',
+        padding: '23px',
       }}
     >
       <h3

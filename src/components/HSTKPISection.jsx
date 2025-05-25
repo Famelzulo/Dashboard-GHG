@@ -1,12 +1,20 @@
 import React from 'react';
 import KPIComponent from './KPIComponent';
 
-const HSTKPISection = () => {
+const HSTKPISectionGrid = () => {
   return (
-    <div className="flex flex-wrap gap-4 justify-center mt-8">
-      <KPIComponent title="Meta de reducción para 2030" value="70%" unit="vs. año base 2021" />
-      <KPIComponent title="Emisiones proyectadas en 2030" value="110.25" unit="tCO₂eq" />
-      <KPIComponent title="Reducción acumulada al 2024" value="269.48" unit="tCO₂eq" />
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1fr',    // ✅ 3 columnas horizontales
+        gap: '20px',                          
+        padding: '10px',
+        alignItems: 'center',                 // ✅ Centrar verticalmente
+      }}
+    >
+      <KPIComponent label="Scope 1" value={150} unit="USD" />
+      <KPIComponent label="Scope 2" value={1200} unit="Usuarios" />
+      <KPIComponent label="Scope 3" value={75} unit="tons" />
     </div>
   );
 };

@@ -61,25 +61,26 @@ export default function IndicatorsTo2030Chart() {
   return (
     <div
       style={{
-        maxWidth: '600px',   // ancho máximo para que no ocupe toda la pantalla
-        width: '90%',        // responsivo, ocupa 90% del ancho disponible
-        height: '300px',     // altura fija para controlar proporción
-        margin: '20px auto', // centrado horizontal con margen arriba y abajo
+        position: 'absolute',
+        width: '100%',
+        maxWidth: '300px',
+        height: '280px',
+        maxHeight: '280px',   
+        top: '120px',
         backgroundColor: 'white',
         borderRadius: '8px',
         padding: '16px',
-        boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
-        marginTop: '-390px',
-        marginLeft: '704px',
+        boxShadow: '10px 10px 6px rgba(0,0,0,0.1)',
+        marginLeft: '404px',
       }}
     >
-      <h5 style={{
+      <h3 style={{
         color: '#14532d',
         fontWeight: '600',
         fontSize: '16px',
         marginBottom: '12px',
         textAlign: 'center'
-      }}>Proyección HST al 2030</h5>
+      }}>Proyección HST al 2030</h3>
       <div style={{ width: '100%', height: 'calc(100% - 40px)' }}>
         <Line
           data={data}

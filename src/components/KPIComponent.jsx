@@ -3,50 +3,58 @@ import React from 'react';
 const KPIComponent = ({ label, value, unit }) => {
   return (
     <div
-      className="bg-white p-2 rounded-md shadow-sm"
       style={{
-        width: 250,
-        height: 100,
-        border: '5px solid #7ef26d',
-        marginTop: '-875px',
-        marginLeft: '10px',
+        position: 'relative',
+        width: '100%',
+        maxWidth  : '200px',  
+        height: '100%',
+        maxHeight: '90px', // Altura máxima
         borderRadius: '8px',
+        backgroundColor: 'white',
+        padding: '4px 16px',
         display: 'flex',
-        backgroundColor: '#f9fafb',
-        marginBottom: '520px',
-      }}
+        flexDirection: 'row', // Mantiene horizontal
+        justifyContent: 'space-between', // Separa label y valor
+        alignItems: 'center',
+        marginBottom: '10px',
+        marginTop: '10px',
+        top: '350px', // Espacio desde la parte superior
+        marginLeft: '80px', // Espacio a la izquierda
+        boxShadow: '10px 9px 6px rgba(0,0,0,0.1)',}}
     >
       <h6
-        className="text-xs font-semibold text-green-700 mb-1 text-center"
         style={{
-          fontSize: '20px',
-          color: '#4b5563', 
-          marginLeft: '50px',
-          marginTop: '240px',
+          margin: 0,
+          fontSize: '18px',
+          fontWeight: 'bold',
+          color: '#4b5563',
         }}
       >
         {label}
       </h6>
-      
-      <div className="text-center">
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'baseline',
+          // Removido marginTop para mantener horizontal
+        }}
+      >
         <span
-          className="text-xl font-bold"
-          style={{ color: '#1f2937',
-            fontSize: '20px', 
-            marginLeft: '10px',
-            marginTop: '420px',
+          style={{
+            fontSize: '20px',
             fontWeight: 'bold',
-           }} 
+            color: '#1f2937',
+          }}
         >
           {value}
         </span>
         {unit && (
           <span
-            className="text-sm font-normal ml-1"
-            style={{ color: '#6b7280',
-              fontSize: '20px', 
-              marginLeft: '10px',
-             }} 
+            style={{
+              fontSize: '16px',
+              color: '#6b7280',
+              marginLeft: '6px',
+            }}
           >
             {unit}
           </span>
